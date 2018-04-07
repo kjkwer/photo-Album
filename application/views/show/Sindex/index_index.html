@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/photoAlbum/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="public/photoAlbum/css/animate.css">
+    <link rel="stylesheet" href="public/photoAlbum/css/style.css">
+    <script src="public/photoAlbum/js/jquery-1.8.3.min.js"></script>
+    <script src="public/photoAlbum/js/jquery.fullPage.min.js"></script>
+</head>
+
+<body>
+<div id="dowebok">
+    <input type="hidden" name="dataId" id="dataId" value="<?=!empty($data['id'])?$data['id']:''  ?>">
+    <div class="section" id="section1">
+        <h1 class="s1_h1">~母亲节快乐~</h1>
+        <img src="public/photoAlbum/img/1/2.png" alt="" class="img1 img">
+        <img src="public/photoAlbum/img/1/2.png" alt="" class="img2 img">
+        <img src="public/photoAlbum/img/1/3.png" class="img img3" alt="">
+        <img src="public/photoAlbum/img/1/7.png" class="img img4" alt="">
+        <img src="public/photoAlbum/img/1/9.png" class="img img5" alt="">
+        <img src="public/photoAlbum/img/1/6.png" class="img img6" alt="">
+        <img src="public/photoAlbum/img/1/4.png" class="img img7" alt="">
+        <img src="public/photoAlbum/img/1/logo2.png" class="img img8" alt="">
+    </div>
+    <div class="section" id="section2">
+        <h1 class="s2_h1">感恩母亲</h1>
+        <img src="public/photoAlbum/img/2/2.png" class="img img9" alt="">
+        <img src="public/photoAlbum/img/2/8.png" class="img img10" alt="">
+        <img src="public/photoAlbum/img/2/5.png" class="img img11" alt="">
+        <img src="public/photoAlbum/img/2/3.png" class="img img12" alt="">
+        <img src="public/photoAlbum/img/2/6.png" class="img img13" alt="">
+        <img src="public/photoAlbum/img/2/7.png" class="img img14" alt="">
+        <img src="public/photoAlbum/img/2/9.png" class="img img33" alt="">
+        <!-- 第二页 替换图片 -->
+        <img src="<?=!empty($data['secondpicture'])?$data['secondpicture']:'public/photoAlbum/img/2/4.png'  ?>" class="img img15 uploadPicture" id="secondpicture" alt="">
+    </div>
+    <div class="section" id="section3">
+        <h1 class="s3_h1"> 给你最美好的祝福 </h1>
+        <!-- 第三页 替换文字 -->
+        <div class="s3_div">
+            <span class="s3_s1"> 亲爱的妈妈 </span>
+            <span class="s3_s2"> 您的孩子 </span>
+
+            <div class="s3_s3">
+                    <textarea name="thirdwords" id="thirdwords" cols="30" rows="10" value='日复一日，
+                    <br> 这份爱不曾改变，
+                    <br> 这份情越来越浓，
+                    <br> 您无怨无悔的付出，
+                    <br> 时刻温暖着我，
+                    <br> 谢谢您，
+                    <br> 祝您母亲节快乐
+                    <br>'></textarea>
+                <!-- 日复一日，
+                <br> 这份爱不曾改变，
+                <br> 这份情越来越浓，
+                <br> 您无怨无悔的付出，
+                <br> 时刻温暖着我，
+                <br> 谢谢您，
+                <br> 祝您母亲节快乐
+                <br> -->
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <img src="public/photoAlbum/img/4/5.png" class="img img16" alt="">
+        <h1 class="s4_h1"> 童年成长中 无所不在的呵护 </h1>
+        <img src="public/photoAlbum/img/4/4.png" class="img img17" alt="">
+        <p class="s4_p">
+            蓝天呵护白云，树木呵护鸟儿，小溪呵护鱼儿。
+            <br> 妈妈无时无刻不在呵护我健康成长。
+        </p>
+        <img src="public/photoAlbum/img/4/6.png" class="img img18" alt="">
+        <img src="public/photoAlbum/img/4/10.png" class="img img19" alt="">
+
+
+        <!-- 4页 第一张 -->
+        <div class="s4_t1 Tong_t1">
+            <img src="<?=!empty($data['fourthpictureone'])?$data['fourthpictureone']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fourthpictureone" alt="">
+            <p>
+                <input type="text" value="2017.5.15" id="fourthwordsone">
+                <!-- 2017.5.15 -->
+            </p>
+        </div>
+        <div class="s4_t2 Tong_t1">
+            <img src="<?=!empty($data['fourthpicturetwo'])?$data['fourthpicturetwo']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fourthpicturetwo" alt="">
+            <p>
+                <input type="text" value="2017.5.15" id="fourthwordstwo">
+                <!-- 2017.5.15 -->
+            </p>
+        </div>
+        <div class="s4_t3 Tong_t1">
+            <img src="<?=!empty($data['fourthpicturethree'])?$data['fourthpicturethree']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fourthpicturethree" alt="">
+            <p>
+                <input type="text" value="2017.5.15" id="fourthwordsthree">
+            </p>
+        </div>
+    </div>
+    <div class="section" id="section5">
+        <div class="section5">
+            <div class="s5_t1 Tong_t1">
+                <img src="<?=!empty($data['fifthpictureone'])?$data['fifthpictureone']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fifthpictureone"  alt="">
+            </div>
+            <div class="s5_t2 Tong_t1">
+                <img src="<?=!empty($data['fifthpicturetwo'])?$data['fifthpicturetwo']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fifthpicturetwo"  alt="">
+            </div>
+            <div class="s5_t3 Tong_t1">
+                <img src="<?=!empty($data['fifthpicturethree'])?$data['fifthpicturethree']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fifthpicturethree"  alt="">
+                <p>
+                    <!-- <span>快乐时光</span> 2017.5.15 -->
+                    <input type="text" value="快乐时光 2017.5.15" id="fifthwords">
+                </p>
+            </div>
+
+            <h1 class="s5_h1">
+                您的天生丽质，
+                <br> 成就我的独一无二
+            </h1>
+            <img src="public/photoAlbum/img/5/5.png" class="img img20" alt="">
+            <img src="public/photoAlbum/img/5/6.png" class="img img21" alt="">
+        </div>
+    </div>
+    <div class="section" id="section6">
+        <img src="public/photoAlbum/img/6/6.png" class="img img22" alt="">
+        <img src="public/photoAlbum/img/6/2.png" class="img img23" alt="">
+        <h1 class="s6_h1"> 妈妈的怀抱 <br> 如同温暖的海洋 </h1>
+        <div class="s6_t1">
+            <div class="t1">
+                <img src="<?=!empty($data['sixthpicture'])?$data['sixthpicture']:'public/photoAlbum/img/2/4.png'  ?>"  class="uploadPicture" id="sixthpicture"   alt="">
+            </div>
+        </div>
+        <img src="public/photoAlbum/img/6/3.png" class="img img24" alt="">
+        <img src="public/photoAlbum/img/6/4.png" class="img img25" alt="">
+    </div>
+    <div class="section" id="section7">
+        <div class="s7_t1 Tong_t1">
+            <img src="<?=!empty($data['seventhpictureone'])?$data['seventhpictureone']:'public/photoAlbum/img/2/4.png'  ?>"  class="uploadPicture" id="seventhpictureone"   alt="">
+        </div>
+        <div class="s7_t2">
+            <p>
+                您在我心中永远最美
+            </p>
+            <img src="<?=!empty($data['seventhpicturetwo'])?$data['seventhpicturetwo']:'public/photoAlbum/img/2/4.png'  ?>"  class="uploadPicture" id="seventhpicturetwo"   alt="">
+        </div>
+        <img src="public/photoAlbum/img/7/5.png" class="img img26" alt="">
+    </div>
+    <div class="section" id="section8">
+        <h1 class="s6_h1"> 岁月如歌 <br> 母爱是最美的赞歌 </h1>
+        <img src="public/photoAlbum/img/8/9.png" class="img img27" alt="">
+        <div class="Tong_t1 s8_t1">
+            <img src="<?=!empty($data['eighthpicture'])?$data['eighthpicture']:'public/photoAlbum/img/2/4.png'  ?>"  class="uploadPicture" id="eighthpicture"   alt="">
+            <p>
+                从来没有为你写过感恩的话语， <br>
+                但您的关爱，点点滴滴都在心头
+            </p>
+        </div>
+        <img src="public/photoAlbum/img/8/6.png" class="img img28" alt="">
+    </div>
+    <div class="section" id="section9">
+        <h1 class="s2_h1">我的全家福</h1>
+        <img src="public/photoAlbum/img/2/2.png" class="img img9" alt="">
+        <img src="public/photoAlbum/img/2/8.png" class="img img10" alt="">
+        <img src="public/photoAlbum/img/2/5.png" class="img img11" alt="">
+        <img src="public/photoAlbum/img/2/3.png" class="img img12" alt="">
+        <img src="public/photoAlbum/img/2/6.png" class="img img13" alt="">
+        <img src="public/photoAlbum/img/2/7.png" class="img img14" alt="">
+        <img src="public/photoAlbum/img/2/s9.png" class="img img34" alt="">
+        <!-- 第二页 替换图片 -->
+        <img src="<?=!empty($data['ninthpicture'])?$data['ninthpicture']:'public/photoAlbum/img/2/4.png'  ?>" class="img img15 uploadPicture" id="ninthpicture" alt="">
+    </div>
+    <div class="section" id="section10">
+        <img src="public/photoAlbum/img/10/4.png" class="img img29" alt="">
+        <img src="public/photoAlbum/img/10/2.png" class="img img30" alt="">
+        <img src="public/photoAlbum/img/10/2.png" class="img img31" alt="">
+        <img id="save" src="public/photoAlbum/img/10/5.png" class="img img32" alt="">
+    </div>
+</div>
+<ul id="menu">
+    <li data-menuanchor="page1" class="active">
+    </li>
+    <li data-menuanchor="page2">
+    </li>
+    <li data-menuanchor="page3">
+    </li>
+    <li data-menuanchor="page4">
+    </li>
+    <li data-menuanchor="page5">
+    </li>
+    <li data-menuanchor="page6">
+    </li>
+    <li data-menuanchor="page7">
+    </li>
+    <li data-menuanchor="page8">
+    </li>
+    <li data-menuanchor="page9">
+    </li>
+    <li data-menuanchor="page10">
+    </li>
+</ul>
+<div class="music xuanzhuan">
+    <img src="public/photoAlbum/img/music.png" alt="">
+</div>
+<audio id="music" loop='true'>
+    <source src="public/photoAlbum/music/music.wav"/>
+</audio>
+//>>文件上传
+<form id="form_face" enctype="multipart/form-data" style="width:auto;">
+    <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" style="display:none;">
+</form>
+</body>
+<script src="public/photoAlbum/js/test.js"></script>
+<!--点击图片上传文件-->
+<script type="text/javascript">
+    var that;
+    $(".uploadPicture").click(function(){
+        that = $(this)
+        fileSelect();
+    })
+    function fileSelect() {
+        document.getElementById("fileToUpload").click();
+    }
+
+    function fileSelected() {
+        var form = new FormData(document.getElementById("form_face"));
+        $.ajax({
+            url:"index.php?p=show&c=index&a=upload",
+            type:"post",
+            data:form,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success:function(data){
+                var result=eval('(' + data + ')')
+                if (result.code==200){
+                    that.attr("src",result.message)
+                }else {
+                    alert(result.message)
+                }
+            },
+            error:function(e){
+                layer.alert("保存失败")
+                return false;
+            }
+        })
+    }
+</script>
+//>>保存数据
+<script type="text/javascript">
+    $("#save").click(function() {
+        //>>第二页数据
+        var secondpicture = $("#secondpicture").attr("src");
+        //>>第三页数据
+        var thirdwords = $("#thirdwords").val();
+        //>>第四页数据
+        var fourthpictureone = $("#fourthpictureone").attr("src");
+        var fourthpicturetwo = $("#fourthpicturetwo").attr("src");
+        var fourthpicturethree = $("#fourthpicturethree").attr("src");
+        var fourthwordsone = $("#fourthwordsone").val();
+        var fourthwordstwo = $("#fourthwordstwo").val();
+        var fourthwordsthree = $("#fourthwordsthree").val();
+        //>>第五页数据
+        var fifthpictureone = $("#fifthpictureone").attr("src");
+        var fifthpicturetwo = $("#fifthpicturetwo").attr("src");
+        var fifthpicturethree = $("#fifthpicturethree").attr("src");
+        var fifthwords = $("#fifthwords").val();
+        //>>第六页数据
+        var sixthpicture = $("#sixthpicture").attr("src");
+        //>>第七页数据
+        var seventhpictureone = $("#seventhpictureone").attr("src");
+        var seventhpicturetwo = $("#seventhpicturetwo").attr("src");
+        //>>第八页数据
+        var eighthpicture = $("#eighthpicture").attr("src");
+        //>>第九页数据
+        var ninthpicture = $("#ninthpicture").attr("src");
+        //>>用户
+        var id = $("#dataId").val()
+        $.post("index.php?p=show&c=index&a=save",{id:id,secondpicture:secondpicture,thirdwords:thirdwords,fourthpictureone:fourthpictureone,fourthpicturetwo:fourthpicturetwo,fourthpicturethree:fourthpicturethree,fourthwordsone:fourthwordsone,fourthwordstwo:fourthwordstwo,fourthwordsthree:fourthwordsthree,fifthpictureone:fifthpictureone,fifthpicturetwo:fifthpicturetwo,fifthpicturethree:fifthpicturethree,fifthwords:fifthwords,sixthpicture:sixthpicture,seventhpictureone:seventhpictureone,seventhpicturetwo:seventhpicturetwo,eighthpicture:eighthpicture,ninthpicture:ninthpicture},function (data) {
+            console.log(data);
+        },"json")
+    })
+</script>
+</html>
