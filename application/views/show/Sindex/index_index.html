@@ -86,21 +86,21 @@
         <div class="s4_t1 Tong_t1">
             <img src="<?=!empty($data['fourthpictureone'])?$data['fourthpictureone']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fourthpictureone" alt="">
             <p>
-                <input type="text" value="2017.5.15" id="fourthwordsone">
+                <input type="text" value="<?=!empty($data['fourthwordsone'])?$data['fourthwordsone']:date('Y.m.d',time())  ?>" id="fourthwordsone">
                 <!-- 2017.5.15 -->
             </p>
         </div>
         <div class="s4_t2 Tong_t1">
             <img src="<?=!empty($data['fourthpicturetwo'])?$data['fourthpicturetwo']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fourthpicturetwo" alt="">
             <p>
-                <input type="text" value="2017.5.15" id="fourthwordstwo">
+                <input type="text" value="<?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:date('Y.m.d',time())  ?>" id="fourthwordstwo">
                 <!-- 2017.5.15 -->
             </p>
         </div>
         <div class="s4_t3 Tong_t1">
             <img src="<?=!empty($data['fourthpicturethree'])?$data['fourthpicturethree']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fourthpicturethree" alt="">
             <p>
-                <input type="text" value="2017.5.15" id="fourthwordsthree">
+                <input type="text" value="<?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:date('Y.m.d',time())  ?>" id="fourthwordsthree">
             </p>
         </div>
     </div>
@@ -116,7 +116,7 @@
                 <img src="<?=!empty($data['fifthpicturethree'])?$data['fifthpicturethree']:'public/photoAlbum/img/2/4.png'  ?>" class="uploadPicture" id="fifthpicturethree"  alt="">
                 <p>
                     <!-- <span>快乐时光</span> 2017.5.15 -->
-                    <input type="text" value="快乐时光 2017.5.15" id="fifthwords">
+                    <input type="text" value="<?=!empty($data['fifthwords'])?$data['fifthwords']:date('Y.m.d',time())  ?>" id="fifthwords">
                 </p>
             </div>
 
