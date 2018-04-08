@@ -49,7 +49,6 @@ class IndexController extends BaseController
         $dataId = $_POST["id"];
         $model = new ModelNew("sl_photo");
         if ($dataId==""){
-            $_POST["user"] = $_COOKIE["id"];
             if ($model->insert($_POST)){
                 $result = array("code"=>200,"message"=>"相册保存成功");
             }else{

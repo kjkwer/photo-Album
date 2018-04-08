@@ -180,7 +180,7 @@
         <img src="public/photoAlbum/img/10/4.png" class="img img29" alt="">
         <img src="public/photoAlbum/img/10/2.png" class="img img30" alt="">
         <img src="public/photoAlbum/img/10/2.png" class="img img31" alt="">
-        <img id="save" src="public/photoAlbum/img/10/5.png" class="img img32" alt="">
+        <img src="public/photoAlbum/img/10/5.png" class="img img32" alt="">
     </div>
 </div>
 <ul id="menu">
@@ -211,12 +211,29 @@
 <audio id="music" loop='true'>
     <source src="public/photoAlbum/music/music.wav"/>
 </audio>
+<div class="zhezhao"></div>
+<div class="tanchu">
+    <h1>填写学员信息</h1>
+    <input type="text" id="student">
+    <button class="but1" id="save">确认</button>
+</div>
 //>>文件上传
 <form id="form_face" enctype="multipart/form-data" style="width:auto;">
     <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" style="display:none;">
 </form>
 </body>
 <script src="public/photoAlbum/js/test.js"></script>
+<script type="text/javascript">
+    $('#section10 .img32').click(function(){
+        $('.zhezhao').show();
+        $('.tanchu').show();
+    })
+
+    $('.zhezhao').click(function(){
+        $('.zhezhao').hide();
+        $('.tanchu').hide();
+    })
+</script>
 <!--点击图片上传文件-->
 <script type="text/javascript">
     var that;
@@ -282,7 +299,8 @@
         var ninthpicture = $("#ninthpicture").attr("src");
         //>>用户
         var id = $("#dataId").val()
-        $.post("index.php?p=show&c=index&a=save",{id:id,secondpicture:secondpicture,thirdwords:thirdwords,fourthpictureone:fourthpictureone,fourthpicturetwo:fourthpicturetwo,fourthpicturethree:fourthpicturethree,fourthwordsone:fourthwordsone,fourthwordstwo:fourthwordstwo,fourthwordsthree:fourthwordsthree,fifthpictureone:fifthpictureone,fifthpicturetwo:fifthpicturetwo,fifthpicturethree:fifthpicturethree,fifthwords:fifthwords,sixthpicture:sixthpicture,seventhpictureone:seventhpictureone,seventhpicturetwo:seventhpicturetwo,eighthpicture:eighthpicture,ninthpicture:ninthpicture},function (data) {
+        var user = $("#student").val();
+        $.post("index.php?p=show&c=index&a=save",{id:id,secondpicture:secondpicture,thirdwords:thirdwords,fourthpictureone:fourthpictureone,fourthpicturetwo:fourthpicturetwo,fourthpicturethree:fourthpicturethree,fourthwordsone:fourthwordsone,fourthwordstwo:fourthwordstwo,fourthwordsthree:fourthwordsthree,fifthpictureone:fifthpictureone,fifthpicturetwo:fifthpicturetwo,fifthpicturethree:fifthpicturethree,fifthwords:fifthwords,sixthpicture:sixthpicture,seventhpictureone:seventhpictureone,seventhpicturetwo:seventhpicturetwo,eighthpicture:eighthpicture,ninthpicture:ninthpicture,user:user},function (data) {
             if(data.code==200){
                 layer.open({
                     content: '相册生成成功！',
