@@ -10,7 +10,7 @@ class IndexController extends BaseController
 {
     public function indexAction(){
         //>>获取用户数据
-        $userId  = !empty($_COOKIE["id"])?$_COOKIE["id"]:"";
+        $userId  = !empty($_COOKIE["user"])?$_COOKIE["user"]:"";
         $model = new ModelNew("photo");
         $data = $model->where(["user"=>$userId])->find()->one();
         include CUR_VIEW_PATH."Sindex" . DS . "index_index.html";
@@ -63,6 +63,7 @@ class IndexController extends BaseController
                 $result = array("code"=>502,"message"=>"相册保存失败");
             }
         }
+        setcookie("user",$_POST["user"],time()+365*24*3600);
         echo json_encode($result);
     }
     //>>设置cookie模拟登陆
