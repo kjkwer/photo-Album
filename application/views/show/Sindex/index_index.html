@@ -238,7 +238,7 @@
                 if (result.code==200){
                     that.attr("src",result.message)
                 }else {
-                    alert(result.message)
+                    layer.alert(result.message)
                 }
             },
             error:function(e){
@@ -279,7 +279,17 @@
         //>>用户
         var id = $("#dataId").val()
         $.post("index.php?p=show&c=index&a=save",{id:id,secondpicture:secondpicture,thirdwords:thirdwords,fourthpictureone:fourthpictureone,fourthpicturetwo:fourthpicturetwo,fourthpicturethree:fourthpicturethree,fourthwordsone:fourthwordsone,fourthwordstwo:fourthwordstwo,fourthwordsthree:fourthwordsthree,fifthpictureone:fifthpictureone,fifthpicturetwo:fifthpicturetwo,fifthpicturethree:fifthpicturethree,fifthwords:fifthwords,sixthpicture:sixthpicture,seventhpictureone:seventhpictureone,seventhpicturetwo:seventhpicturetwo,eighthpicture:eighthpicture,ninthpicture:ninthpicture},function (data) {
-            console.log(data);
+            if(data.code==200){
+                layer.open({
+                    content: '相册生成成功！',
+                    btn: ['确认'],
+                    yes: function(index, layero) {
+                        location.reload()
+                    },
+                });
+            }else {
+                layer.alert("相册生成失败！")
+            }
         },"json")
     })
 </script>
