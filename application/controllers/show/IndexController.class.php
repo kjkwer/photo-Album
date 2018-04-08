@@ -11,9 +11,8 @@ class IndexController extends BaseController
     public function indexAction(){
         //>>获取用户数据
         $userId  = !empty($_COOKIE["id"])?$_COOKIE["id"]:"";
-        $model = new ModelNew("sl_photo");
+        $model = new ModelNew("photo");
         $data = $model->where(["user"=>$userId])->find()->one();
-//        var_dump($data);exit();
         include CUR_VIEW_PATH."Sindex" . DS . "index_index.html";
     }
     //>>图片上传

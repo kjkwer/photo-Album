@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9c79a620-9cd7-4a4f-86bb-ae8fc79d33fc" name="phpotoAlbum" url="http://211.149.197.112">
+        <fileTransfer host="211.149.197.112" port="21" rootFolder="/ceshi35/wwwroot">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
