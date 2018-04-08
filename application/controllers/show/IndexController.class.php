@@ -46,16 +46,18 @@ class IndexController extends BaseController
     //>>保存数据
     public function saveAction(){
         $result = array("code"=>500,"message"=>"相册保存失败");
-        $dataId = $_POST["id"];
         $model = new ModelNew("sl_photo");
-        if ($dataId==""){
+        $data = $model->where(["user"=>$_POST["user"]])->find("id")->one();
+        $id = !empty($data["id"])?$data["id"]:'';
+        if ($id == ""){
             if ($model->insert($_POST)){
                 $result = array("code"=>200,"message"=>"相册保存成功");
             }else{
                 $result = array("code"=>501,"message"=>"相册保存失败");
             }
         }else{
-            if($model->where(["id"=>$dataId])->update($_POST)){
+            unset($_POST["id"]);
+            if($model->where(["id"=>$id])->update($_POST)){
                 $result = array("code"=>200,"message"=>"相册保存成功");
             }else{
                 $result = array("code"=>502,"message"=>"相册保存失败");

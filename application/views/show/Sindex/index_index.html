@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>成实外教育2018母亲节“把爱带回家”致我最爱的妈妈</title>
     <link rel="stylesheet" href="public/photoAlbum/css/jquery.fullPage.css">
     <link rel="stylesheet" href="public/photoAlbum/css/animate.css">
     <link rel="stylesheet" href="public/photoAlbum/css/style.css">
@@ -231,7 +231,7 @@
 
     $('.zhezhao').click(function(){
         $('.zhezhao').hide();
-        $('.tanchu').hide();
+
     })
 </script>
 <!--点击图片上传文件-->
@@ -244,7 +244,7 @@
     function fileSelect() {
         document.getElementById("fileToUpload").click();
     }
-
+    $('.tanchu').hide();
     function fileSelected() {
         var form = new FormData(document.getElementById("form_face"));
         $.ajax({
@@ -311,6 +311,7 @@
                 });
             }else {
                 layer.alert("相册生成失败！")
+                $('.tanchu').hide();
             }
         },"json")
     })
