@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
     <title>成实外教育2018母亲节“把爱带回家”致我最爱的妈妈</title>
     <link rel="stylesheet" href="public/photoAlbum/css/jquery.fullPage.css">
     <link rel="stylesheet" href="public/photoAlbum/css/animate.css">
@@ -46,7 +48,7 @@
             <span class="s3_s2"> 您的孩子 </span>
 
             <div class="s3_s3">
-                <textarea name="thirdwords" id="thirdwords" cols="30" rows="10" value=''><?=!empty($data['thirdwords'])?$data['thirdwords']:''  ?></textarea>
+                <textarea name="thirdwords" id="thirdwords" cols="30" rows="10" placeholder="点击添加文字" value=''><?=!empty($data['thirdwords'])?$data['thirdwords']:''  ?></textarea>
                 <!-- 日复一日，
                 <br> 这份爱不曾改变，
                 <br> 这份情越来越浓，
@@ -81,14 +83,14 @@
         <div class="s4_t2 Tong_t1">
             <img src="<?=!empty($data['fourthpicturetwo'])?$data['fourthpicturetwo']:'public/photoAlbum/img/2/4.jpg'  ?>"  class="uploadPicture" id="fourthpicturetwo" alt="">
             <p>
-                <input type="text" value="<?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:''  ?>" id="fourthwordstwo" placeholder="点击修改文字">
+                <input type="text" value="<?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:''  ?>" id="fourthwordstwo" placeholder="点击添加文字">
                 <!-- 2017.5.15 -->
             </p>
         </div>
         <div class="s4_t3 Tong_t1">
             <img src="<?=!empty($data['fourthpicturethree'])?$data['fourthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fourthpicturethree" alt="">
             <p>
-                <input type="text" value="<?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:''  ?>" placeholder="点击修改文字" id="fourthwordsthree">
+                <input type="text" value="<?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:''  ?>" placeholder="点击添加文字" id="fourthwordsthree">
             </p>
         </div>
     </div>
@@ -104,7 +106,7 @@
                 <img src="<?=!empty($data['fifthpicturethree'])?$data['fifthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fifthpicturethree" alt="">
                 <p>
                     <!-- <span>快乐时光</span> 2017.5.15 -->
-                    <input type="text" value="<?=!empty($data['fifthwords'])?$data['fifthwords']:''  ?>" placeholder="点击修改文字">
+                    <input type="text" value="<?=!empty($data['fifthwords'])?$data['fifthwords']:''  ?>" placeholder="点击添加文字">
                 </p>
             </div>
 
@@ -129,6 +131,7 @@
         <img src="public/photoAlbum/img/6/4.png" class="img img25" alt="">
     </div>
     <div class="section" id="section7">
+        <img src="public/photoAlbum/img/7/1.jpg" alt="" class="dibu">
         <div class="s7_t1 Tong_t1">
             <img src="<?=!empty($data['seventhpictureone'])?$data['seventhpictureone']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="seventhpictureone" alt="">
         </div>
