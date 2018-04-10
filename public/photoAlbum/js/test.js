@@ -268,7 +268,7 @@ function page7() {
     ]
 
     $('#section7  .s7_t1').animate({
-        right:'-39vw',
+        right:'0vw',
         opacity:1
     },1300)
 
@@ -360,17 +360,3 @@ function removeClass(item){
 
 
 
-window.onorientationchange = function(){ 
-    switch(window.orientation){ 
-        case -90: 
-            alert('该电子相册请竖屏展示!');
-            break;
-        case 90: 
-            alert('该电子相册请竖屏展示!');
-            break;
-        case 0: 
-        case 180: 
-            //  alert("竖屏:" + window.orientation);
-        break; 
-    } 
-} 

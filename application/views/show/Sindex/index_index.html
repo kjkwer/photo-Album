@@ -7,17 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
+    
     <title>成实外教育2018母亲节“把爱带回家”致我最爱的妈妈</title>
     <link rel="stylesheet" href="public/photoAlbum/css/jquery.fullPage.css">
     <link rel="stylesheet" href="public/photoAlbum/css/animate.css">
     <link rel="stylesheet" href="public/photoAlbum/css/style.css">
     <script src="public/photoAlbum/js/jquery-1.8.3.min.js"></script>
     <script src="public/photoAlbum/js/jquery.fullPage.min.js"></script>
+
+    <link rel="stylesheet" href="public/layer/theme/default/layer.css">
+    <script src="public/layer/layer.js" type="text/javascript"></script>
 </head>
 
 <body>
 <div id="dowebok">
     <div class="section" id="section1">
+        <img src="public/photoAlbum/img/fenx.png" class="img fenx" alt="">
         <h1 class="s1_h1">~母亲节快乐~</h1>
         <img src="public/photoAlbum/img/1/2.png" alt="" class="img1 img">
         <img src="public/photoAlbum/img/1/2.png" alt="" class="img2 img">
@@ -45,7 +50,8 @@
         <!-- 第三页 替换文字 -->
         <div class="s3_div">
             <span class="s3_s1"> 亲爱的妈妈 </span>
-            <span class="s3_s2"> 您的孩子 </span>
+            <!-- <span class="s3_s2"> 您的孩子 </span> -->
+            <input class="s3_s2" type="text" placeholder="输入名字">
 
             <div class="s3_s3">
                 <textarea name="thirdwords" id="thirdwords" cols="30" rows="10" placeholder="点击添加文字" value=''><?=!empty($data['thirdwords'])?$data['thirdwords']:''  ?></textarea>
@@ -81,14 +87,20 @@
             </p>
         </div>
         <div class="s4_t2 Tong_t1">
-            <img src="<?=!empty($data['fourthpicturetwo'])?$data['fourthpicturetwo']:'public/photoAlbum/img/2/4.jpg'  ?>"  class="uploadPicture" id="fourthpicturetwo" alt="">
+            <div>
+                <img src="<?=!empty($data['fourthpicturetwo'])?$data['fourthpicturetwo']:'public/photoAlbum/img/2/4.jpg'  ?>"  class="uploadPicture" id="fourthpicturetwo" alt="">
+            </div>
+            
             <p>
                 <input type="text" value="<?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:''  ?>" id="fourthwordstwo" placeholder="点击添加文字">
                 <!-- 2017.5.15 -->
             </p>
         </div>
         <div class="s4_t3 Tong_t1">
-            <img src="<?=!empty($data['fourthpicturethree'])?$data['fourthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fourthpicturethree" alt="">
+            <div>
+                <img src="<?=!empty($data['fourthpicturethree'])?$data['fourthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fourthpicturethree" alt="">
+            </div>
+            
             <p>
                 <input type="text" value="<?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:''  ?>" placeholder="点击添加文字" id="fourthwordsthree">
             </p>
@@ -103,7 +115,9 @@
                 <img src="<?=!empty($data['fifthpicturetwo'])?$data['fifthpicturetwo']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fifthpicturetwo" alt="">
             </div>
             <div class="s5_t3 Tong_t1">
-                <img src="<?=!empty($data['fifthpicturethree'])?$data['fifthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fifthpicturethree" alt="">
+                <div>
+                    <img src="<?=!empty($data['fifthpicturethree'])?$data['fifthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fifthpicturethree" alt="">
+                </div>
                 <p>
                     <!-- <span>快乐时光</span> 2017.5.15 -->
                     <input type="text" value="<?=!empty($data['fifthwords'])?$data['fifthwords']:''  ?>" placeholder="点击添加文字">
@@ -147,7 +161,9 @@
         <h1 class="s6_h1"> 岁月如歌 <br> 母爱是最美的赞歌 </h1>
         <img src="public/photoAlbum/img/8/9.png" class="img img27" alt="">
         <div class="Tong_t1 s8_t1">
-            <img src="<?=!empty($data['eighthpicture'])?$data['eighthpicture']:'public/photoAlbum/img/2/4.jpg'  ?>"  class="uploadPicture" id="eighthpicture" alt="">
+            <div>
+                <img src="<?=!empty($data['eighthpicture'])?$data['eighthpicture']:'public/photoAlbum/img/2/4.jpg'  ?>"  class="uploadPicture" id="eighthpicture" alt="">
+            </div>
             <p>
                 从来没有为你写过感恩的话语， <br>
                 但您的关爱，点点滴滴都在心头
@@ -156,7 +172,7 @@
         <img src="public/photoAlbum/img/8/6.png" class="img img28" alt="">
     </div>
     <div class="section" id="section9">
-        <h1 class="s2_h1">我的全家福</h1>
+        <h1 class="s2_h1">我们全家福</h1>
         <img src="public/photoAlbum/img/2/2.png" class="img img9" alt="">
         <img src="public/photoAlbum/img/2/8.png" class="img img10" alt="">
         <img src="public/photoAlbum/img/2/5.png" class="img img11" alt="">
@@ -285,5 +301,23 @@
             window.location.href='index.php?p=show&c=index&a=index#page1';
         },"json")
     })
+</script>
+<script type="text/javascript">
+    window.onresize = function(){
+        switch(window.orientation){
+            case -90:
+                layer.alert('成实外教育培训学校提示' +
+                    '该母亲节H5请竖屏观看！');
+                break;
+            case 90:
+                layer.alert('成实外教育培训学校提示' +
+                    '该母亲节H5请竖屏观看!');
+                break;
+            case 0:
+            case 180:
+                //  alert("竖屏:" + window.orientation);
+                break;
+        }
+    }
 </script>
 </html>
