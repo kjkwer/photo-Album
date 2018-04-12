@@ -35,11 +35,11 @@ class IndexController extends BaseController
                 //>>移动文件
                 $file = $filePath."/".uniqid().stristr($pictureData['name'],'.');
                 if(move_uploaded_file($pictureData["tmp_name"],$file)){
-                    if ($pictureSize>=500){
-                        $this->library("Imgcompress");
-                        $image  = new Imgcompress($file,1);
-                        $image->compressImg($file);
-                    }
+//                    if ($pictureSize>=500){
+//                        $this->library("Imgcompress");
+//                        $image  = new Imgcompress($file,1);
+//                        $image->compressImg($file);
+//                    }
                     $result = array("code"=>200,"message"=>$file);
                 }else{
                     $result = array("code"=>502,"message"=>"文件保存失败");
