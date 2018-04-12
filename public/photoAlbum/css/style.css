@@ -369,6 +369,8 @@ html {
     top: 20vw;
     left: 50%;
     margin-left: -25vw;
+    height: 60vw;
+    overflow: hidden;
 }
 
 #section4 {
@@ -468,6 +470,18 @@ html {
     height: 60vw;
     overflow: hidden;
 }
+.s4_t2 img{
+    max-height: 56vw;
+}
+.s4_t1 img{
+    max-height: 57vw;
+}
+.s4_t3 img{
+    max-height: 60vw;
+}
+.s5_t3 img{
+    max-height: 57vw;
+}
 .s4_t3 {
     width: 55vw;
     min-height: 60vw;
@@ -518,7 +532,7 @@ html {
     min-height: 56vw;
     left: 50%;
     margin-left: -35vw;
-    top: 50vw;
+    top: 60vw;
     z-index: 3;
     box-shadow: 0 2px 15px #e9c0ce;
 }
@@ -531,8 +545,8 @@ html {
 }
 
 .s5_t3 p span {
-    font-size: 5vw;
-    margin-top: 4vw;
+    /* font-size: 5vw;
+    margin-top: 4vw; */
 }
 
 .s5_h1 {
@@ -790,7 +804,22 @@ html {
     outline: none;
     line-height: 6vw;
 }
-
+.tanchu textarea{
+    width: 100%;
+    display: block;
+    background: transparent;
+    border: none;
+    text-align: center;
+    color: #806ab3 !important;
+    font-size: 4vw !important;
+    outline: none;
+    line-height: 6vw;
+    height: 15vw;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 20px;
+}
 .Tong_t1 input {
     display: block;
     width: 100%;
@@ -815,7 +844,7 @@ html {
     bottom: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 200;
+    z-index: 20031231;
     display: none;
 }
 
@@ -827,8 +856,9 @@ html {
     padding: 10px;
     left: 15%;
     background: #fff;
-    z-index: 300;
+    z-index: 20031235;
     display: none;
+    border: 1px solid #806ab3;
 }
 
 .tanchu h1 {
@@ -859,7 +889,11 @@ html {
     background: #ff8a00;
     border-radius: 5px;
 }
-
+#dowebok{
+    /* position: fixed;
+    top: 0;left: 0;
+    right: 0; */
+}
 
 #section5 input{
     text-align: left;
@@ -867,9 +901,10 @@ html {
 
 .input10{
     position: absolute;
-    width: 46vw;
+    min-width: 46vw;
     left: 50%;
-    margin-left: -23vw;
+    /* margin-left: -23vw; */
+    transform: translate(-50%,0);
     bottom: 35vw;
     height: 8vw;
     background: transparent;
@@ -877,13 +912,15 @@ html {
     box-sizing: border-box;
     text-align: center;
     color: #fff;
+    line-height: 7vw;
+    white-space: nowrap;
 }
 
 
 .jiantou{
     position: fixed;
     z-index: 500000;
-    bottom: 3vw;
+    bottom: 1vw;
     width: 14vw;
     left: 50%;
     margin-left: -7vw;
@@ -895,13 +932,19 @@ html {
 .updown{
     animation: updown 1s infinite alternate;
 }
+.s7_t1 img{
+    max-height: 60vw;
+}
+.s8_t1 img{
+    max-height: 65vw;
+}
 @keyframes updown{
     from{
-        bottom: 3vw;
+        bottom: 1vw;
         opacity: 0.5;
     }
     to{
-        bottom: 7vw;
+        bottom: 5vw;
         opacity: 1;
     }
 }
@@ -925,3 +968,6 @@ html {
     width: 50vw;
     display: none;
 }
+
+
+

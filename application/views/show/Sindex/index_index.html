@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="screen-orientation" content="portrait">
     <meta name="x5-orientation" content="portrait">
@@ -21,6 +20,7 @@
 
 <body>
 <div id="dowebok">
+    <input type="hidden" id="id" value="<?=!empty($data['id'])?$data['id']:''  ?>">
     <div class="section" id="section1">
         <img src="public/photoAlbum/img/fenx.png" class="img fenx" alt="">
         <h1 class="s1_h1">~母亲节快乐~</h1>
@@ -51,10 +51,12 @@
         <div class="s3_div">
             <span class="s3_s1"> 亲爱的妈妈 </span>
             <!-- <span class="s3_s2"> 您的孩子 </span> -->
-            <input class="s3_s2" type="text" placeholder="输入名字">
+            <span class="s3_s2 Shuru" id="thirdname"> <?=!empty($data['thirdname'])?$data['thirdname']:'输入名字'?> </span>
+            <!-- <input class="s3_s2" type="text" id="thirdname" value="<?=!empty($data['thirdname'])?$data['thirdname']:''?>" placeholder="输入名字"> -->
 
-            <div class="s3_s3">
-                <textarea name="thirdwords" id="thirdwords" cols="30" rows="10" placeholder="点击添加文字" value=''><?=!empty($data['thirdwords'])?$data['thirdwords']:''  ?></textarea>
+            <div class="s3_s3" id="thirdwords"><?=!empty($data['thirdwords'])?$data['thirdwords']:'点击填写我想对妈妈说的话'  ?>
+                
+                <!-- <textarea name="thirdwords" id="thirdwords" cols="30" rows="10" placeholder="点击添加文字" value=''><?=!empty($data['thirdwords'])?$data['thirdwords']:''  ?></textarea> -->
                 <!-- 日复一日，
                 <br> 这份爱不曾改变，
                 <br> 这份情越来越浓，
@@ -82,6 +84,7 @@
         <div class="s4_t1 Tong_t1">
             <img src="<?=!empty($data['fourthpictureone'])?$data['fourthpictureone']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fourthpictureone" alt="">
             <p>
+                <!-- <span class="Shuru" id="fourthwordsone"><?=!empty($data['fourthwordsone'])?$data['fourthwordsone']:'点击修改文字'  ?></span> -->
                 <!-- <input type="text" value="2017.5.15"> -->
                 <!-- 2017.5.15 -->
             </p>
@@ -92,7 +95,8 @@
             </div>
             
             <p>
-                <input type="text" value="<?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:''  ?>" id="fourthwordstwo" placeholder="点击添加文字">
+                <span class="Shuru" id="fourthwordstwo"><?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:'点击修改文字'  ?></span>
+                <!-- <input type="text" value="<?=!empty($data['fourthwordstwo'])?$data['fourthwordstwo']:''  ?>" id="fourthwordstwo" placeholder="点击添加文字"> -->
                 <!-- 2017.5.15 -->
             </p>
         </div>
@@ -102,7 +106,8 @@
             </div>
             
             <p>
-                <input type="text" value="<?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:''  ?>" placeholder="点击添加文字" id="fourthwordsthree">
+                <span class="Shuru" id="fourthwordsthree"><?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:'点击修改文字'  ?></span>
+                <!-- <input type="text" value="<?=!empty($data['fourthwordsthree'])?$data['fourthwordsthree']:''  ?>" placeholder="点击添加文字" id="fourthwordsthree"> -->
             </p>
         </div>
     </div>
@@ -119,8 +124,9 @@
                     <img src="<?=!empty($data['fifthpicturethree'])?$data['fifthpicturethree']:'public/photoAlbum/img/2/4.jpg'  ?>" class="uploadPicture" id="fifthpicturethree" alt="">
                 </div>
                 <p>
+                    <span class="Shuru" id="fifthwords"><?=!empty($data['fifthwords'])?$data['fifthwords']:'点击修改文字'  ?></span>
                     <!-- <span>快乐时光</span> 2017.5.15 -->
-                    <input type="text" value="<?=!empty($data['fifthwords'])?$data['fifthwords']:''  ?>" placeholder="点击添加文字">
+                    <!-- <input type="text" value="<?=!empty($data['fifthwords'])?$data['fifthwords']:''  ?>" placeholder="点击添加文字"> -->
                 </p>
             </div>
 
@@ -187,8 +193,10 @@
         <img src="public/photoAlbum/img/10/4.png" class="img img29" alt="">
         <img src="public/photoAlbum/img/10/2.png" class="img img30" alt="">
         <img src="public/photoAlbum/img/10/2.png" class="img img31" alt="">
-        <img id="save" src="public/photoAlbum/img/10/5.png" class="img img32" alt="">
-        <input type="text" id="user" class="input10" value="<?=!empty($data['user'])?$data['user']:''  ?>" placeholder="请输入投票编号+学生姓名（例0351张姿萌）">
+        <img id="save" src="<?=isset($chaeck)?'public/photoAlbum/img/10/5s.png':'public/photoAlbum/img/10/5.png' ?>" class="img img32" alt="">
+        <span class="input10 Shuru" id="user"><?=!empty($data['user'])?$data['user']:'请输入投票编号+学生姓名（例0351张姿萌）'  ?>
+        </span>
+        <!-- <input type="text" id="user" class="input10" value="<?=!empty($data['user'])?$data['user']:''  ?>" placeholder="请输入投票编号+学生姓名（例0351张姿萌）"> -->
     </div>
 </div>
 <ul id="menu">
@@ -227,6 +235,14 @@
 <form id="form_face" enctype="multipart/form-data" style="width:auto;">
     <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" style="display:none;">
 </form>
+
+<div class="zhezhao"></div>
+    <div class="tanchu">
+        <h1>输入文字</h1>
+        <input type="text" maxlength="15">
+        <textarea name="" id="" cols="30" rows="10" value=''></textarea>
+        <button class="but1">确认添加</button>
+    </div>
 </body>
 
 <script src="public/photoAlbum/js/test.js"></script>
@@ -271,19 +287,20 @@
         //>>第二页数据
         var secondpicture = $("#secondpicture").attr("src");
         //>>第三页数据
-        var thirdwords = $("#thirdwords").val();
+        var thirdwords = $("#thirdwords").text();
+        var thirdname = $("#thirdname").text();
         //>>第四页数据
         var fourthpictureone = $("#fourthpictureone").attr("src");
         var fourthpicturetwo = $("#fourthpicturetwo").attr("src");
         var fourthpicturethree = $("#fourthpicturethree").attr("src");
-        var fourthwordsone = $("#fourthwordsone").val();
-        var fourthwordstwo = $("#fourthwordstwo").val();
-        var fourthwordsthree = $("#fourthwordsthree").val();
+        var fourthwordsone = $("#fourthwordsone").text();
+        var fourthwordstwo = $("#fourthwordstwo").text();
+        var fourthwordsthree = $("#fourthwordsthree").text();
         //>>第五页数据
         var fifthpictureone = $("#fifthpictureone").attr("src");
         var fifthpicturetwo = $("#fifthpicturetwo").attr("src");
         var fifthpicturethree = $("#fifthpicturethree").attr("src");
-        var fifthwords = $("#fifthwords").val();
+        var fifthwords = $("#fifthwords").text();
         //>>第六页数据
         var sixthpicture = $("#sixthpicture").attr("src");
         //>>第七页数据
@@ -295,10 +312,18 @@
         var ninthpicture = $("#ninthpicture").attr("src");
         //>>用户
         var id = $("#dataId").val()
-        var user = $("#user").val();
+        var user = $("#user").text();
+        if (user=="请输入投票编号+学生姓名（例0351张姿萌）" || user==""){
+            layer.alert('请填入学生姓名');
+            return false;
+        }
 //        alert(ninthpicture);return false;
-        $.post("index.php?p=show&c=index&a=save",{id:id,secondpicture:secondpicture,thirdwords:thirdwords,fourthpictureone:fourthpictureone,fourthpicturetwo:fourthpicturetwo,fourthpicturethree:fourthpicturethree,fourthwordsone:fourthwordsone,fourthwordstwo:fourthwordstwo,fourthwordsthree:fourthwordsthree,fifthpictureone:fifthpictureone,fifthpicturetwo:fifthpicturetwo,fifthpicturethree:fifthpicturethree,fifthwords:fifthwords,sixthpicture:sixthpicture,seventhpictureone:seventhpictureone,seventhpicturetwo:seventhpicturetwo,eighthpicture:eighthpicture,ninthpicture:ninthpicture,user:user},function (data) {
-            window.location.href='index.php?p=show&c=index&a=index#page1';
+        $.post("index.php?p=show&c=index&a=save",{id:id,secondpicture:secondpicture,thirdwords:thirdwords,thirdname:thirdname,fourthpictureone:fourthpictureone,fourthpicturetwo:fourthpicturetwo,fourthpicturethree:fourthpicturethree,fourthwordsone:fourthwordsone,fourthwordstwo:fourthwordstwo,fourthwordsthree:fourthwordsthree,fifthpictureone:fifthpictureone,fifthpicturetwo:fifthpicturetwo,fifthpicturethree:fifthpicturethree,fifthwords:fifthwords,sixthpicture:sixthpicture,seventhpictureone:seventhpictureone,seventhpicturetwo:seventhpicturetwo,eighthpicture:eighthpicture,ninthpicture:ninthpicture,user:user},function (data) {
+            console.log(data.id);
+            $("#id").val(data.id)
+            window.location.href='#page1';
+            get_share()
+            $(".fenx").show();
         },"json")
     })
 </script>
@@ -306,12 +331,10 @@
     window.onresize = function(){
         switch(window.orientation){
             case -90:
-                layer.alert('成实外教育培训学校提示' +
-                    '该母亲节H5请竖屏观看！');
+                layer.alert('成实外教育培训学校提示\r\n该母亲节H5请竖屏观看！');
                 break;
             case 90:
-                layer.alert('成实外教育培训学校提示' +
-                    '该母亲节H5请竖屏观看!');
+                layer.alert('成实外教育培训学校提示\r\n该母亲节H5请竖屏观看!');
                 break;
             case 0:
             case 180:
@@ -319,5 +342,99 @@
                 break;
         }
     }
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+    function get_share(){
+        var photoId = $("#id").val();
+        $.getJSON("index.php?p=show&c=index&a=share&url="+encodeURIComponent(location.href.split('#')[0]),function (data) {
+            wx.config({
+                debug: false,
+                appId: data.package['appId'],
+                timestamp: data.package['timestamp'],
+                nonceStr:  data.package['nonceStr'],
+                signature: data.package['signature'],
+                jsApiList:[
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareWeibo',
+                    'onMenuShareQQ',
+                    'onMenuShareQZone',
+                ]
+            })
+            wx.ready(function () {
+                var title = '成实外教育2018母亲节“把爱带回家”致我最爱的妈妈';
+                var imgUrl = "http://ceshi35.jileiyun.com/public/photoAlbum/img/7/1.jpg";
+                var link =  "http://ceshi35.jileiyun.com/index.php?p=show&c=index&a=sharey&id="+photoId;
+                var desc = '传递爱·分享爱·助力爱|成实外教育培训学校2018母亲节“把爱带回家”，祝天下母亲节日快乐。愿时光温暖你，因为有你我们更幸福！';
+                //分享朋友圈
+                wx.onMenuShareTimeline({
+                    title: title, // 分享标题
+                    link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                    desc: desc,
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () {
+                        layer.alert('分享成功！');
+                    },
+                    cancel: function () {
+                        layer.alert('取消分享！');
+                    }
+                })
+                //分享给好友
+                wx.onMenuShareAppMessage({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () {
+                        layer.alert('分享成功！');
+                    },
+                    cancel: function () {
+                        layer.alert('取消分享！');
+                    }
+                });
+                //分享到腾讯微博
+                wx.onMenuShareWeibo({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: function () {
+                        layer.alert('分享成功！');
+                    },
+                    cancel: function () {
+                        layer.alert('取消分享！');
+                    }
+                });
+                //分享到qq
+                wx.onMenuShareQQ({
+                    title: title,
+                    desc: desc,
+                    link: link,
+                    imgUrl: imgUrl,
+                    success: function () {
+                        layer.alert('分享成功！');
+                    },
+                    cancel: function () {
+                        layer.alert('取消分享！');
+                    }
+                });
+                //分享到qq空间
+                wx.onMenuShareQZone({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: link, // 分享链接
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () {
+                        layer.alert('分享成功！');
+                    },
+                    cancel: function () {
+                        layer.alert('取消分享！');
+                    }
+                });
+            })
+        })
+    }
+    get_share();
 </script>
 </html>
